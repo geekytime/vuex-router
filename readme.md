@@ -1,4 +1,4 @@
-#vuex-router
+# vuex-router
 
 ## What is this?
 
@@ -19,8 +19,7 @@ into the store, where it can be managed and safely shared across components.
 
 This is convenient from an API perspective, and allows for some very clean code. The location state is read and updated just like the rest of the application state, instead of requiring a separate routing API.
 
-## How is this different than [vue-router](https://router.vuejs.org/en/) with
-[vuex-router-sync](https://github.com/vuejs/vuex-router-sync)?
+## How is this different than [vue-router](https://router.vuejs.org/en/) with [vuex-router-sync](https://github.com/vuejs/vuex-router-sync)?
 
 Even when used with `vuex-router-sync`, `vue-router` still uses the browser history as the "source of truth" for the location state.
 
@@ -45,9 +44,9 @@ Install `vuex-router` with yarn or npm.
 
 The easiest way to configure `vuex-router` is with [WebPack](https://webpack.js.org/) and [babel-loader](https://github.com/babel/babel-loader). In most situations, babel-loader will find the `.babelrc` file in the `vuex-router` folder and use it to build `vuex-router`.
 
-If you have questions about a specific configuration scenario, feel free to open an issue, or submit a PR with an example, even if it's only partly working.
+If there are questions about a specific configuration scenario, feel free to open an issue, or submit a PR with an example, even if it's only partly working.
 
-A pre-transpiled version of `vuex-router` is included at `dist/vuex-router-min.js` in the npm package, but it has not been thoroughly tested. Please open an issue if you run into any problems using it.
+A pre-transpiled version of `vuex-router` is included at `dist/vuex-router-min.js` in the npm package, but it has not been thoroughly tested. Please open an issue if there are any problems using it.
 
 ### Configuring the Vuex store
 
@@ -229,7 +228,7 @@ store.dispatch("router/goBack")
 
 The user's location will be `"/"`, because when we added `"/blog"`, it _replaced_ `"/home"` in the browser's history.
 
-You can learn more about browser history at [MDN - Adding and modifying history entries]([`window.history.pushState`](https://developer.mozilla.org/en-US/docs/Web/API/History_API#Adding_and_modifying_history_entries)
+Learn more about browser history at [MDN - Adding and modifying history entries]([`window.history.pushState`](https://developer.mozilla.org/en-US/docs/Web/API/History_API#Adding_and_modifying_history_entries)
 
 #### `router/transitionEnd`
 
