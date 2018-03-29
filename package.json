@@ -4,6 +4,22 @@
   "main": "lib/index.js",
   "author": "Chris Jaynes <chris@jaynes.me>",
   "license": "MIT",
+  "description": "Moves your app's location state into your Vuex store. Allows super-easy page-based routing with built-in slide transitions.",
+  "keywords": [
+    "vue",
+    "vue.js",
+    "vuejs",
+    "vuex",
+    "router",
+    "vue-router",
+    "page component",
+    "slide transitions"
+  ],
+  "homepage": "https://github.com/geekytime/vuex-router",
+  "bugs": {
+    "url": "https://github.com/geekytime/vuex-router"
+  },
+  "repository": "github:geekytime/vuex-router",
   "scripts": {
     "build": "webpack",
     "dev": "webpack-dev-server --config webpack.config.test.js",
