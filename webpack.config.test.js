@@ -26,4 +26,4 @@ module.exports = {
   mode: "development",
 }
 
-process.noDeprecation = true;
+process.noDeprecation = true
