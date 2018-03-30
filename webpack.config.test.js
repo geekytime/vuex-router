@@ -23,5 +23,7 @@ module.exports = {
       }
     })
   ],
-  mode: "development"
+  mode: "development",
 }
+
+process.noDeprecation = true

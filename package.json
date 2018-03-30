@@ -1,9 +1,25 @@
 {
   "name": "vuex-router",
-  "version": "1.0.0",
+  "version": "1.1.2",
   "main": "lib/index.js",
   "author": "Chris Jaynes <chris@jaynes.me>",
   "license": "MIT",
+  "description": "Moves your app's location state into your Vuex store. Allows super-easy page-based routing with built-in slide transitions.",
+  "keywords": [
+    "vue",
+    "vue.js",
+    "vuejs",
+    "vuex",
+    "router",
+    "vue-router",
+    "page component",
+    "slide transitions"
+  ],
+  "homepage": "https://github.com/geekytime/vuex-router",
+  "bugs": {
+    "url": "https://github.com/geekytime/vuex-router"
+  },
+  "repository": "github:geekytime/vuex-router",
   "scripts": {
     "build": "webpack",
     "dev": "webpack-dev-server --config webpack.config.test.js",
@@ -26,8 +42,10 @@
     "less-loader": "^4.1.0",
     "style-loader": "^0.20.3",
     "tape": "^4.9.0",
+    "vue": "2.x",
     "vue-loader": "^14.2.2",
     "vue-template-compiler": "^2.5.16",
+    "vuex": "3.x",
     "webpack": "^4.3.0",
     "webpack-cli": "^2.0.13",
     "webpack-dev-server": "^3.1.1",
