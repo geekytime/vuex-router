@@ -1,5 +1,6 @@
 # vuex-router
 
+[![CircleCI](https://circleci.com/gh/geekytime/vuex-router.svg?style=svg)](https://circleci.com/gh/geekytime/vuex-router)
 An alternative to vue-router which moves the app location state into the Vuex store.
 
 The store becomes the "source of truth" for location state within the app.
