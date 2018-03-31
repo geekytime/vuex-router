@@ -1,19 +1,16 @@
 # vuex-router
 
 [![CircleCI](https://circleci.com/gh/geekytime/vuex-router.svg?style=svg)](https://circleci.com/gh/geekytime/vuex-router)
-An alternative to vue-router which moves the app location state into the Vuex store.
 
-The store becomes the "source of truth" for location state within the app.
+Moves app location state into a `router` module in the Vuex store.
 
-The store becomes the "source of truth" for location state within
-the app. The location state is changed by dispatching actions to the router module.
+The store becomes the "source of truth" for location state within the app. Location state is changed by dispatching actions to the `router` module.
 
 The browser location history is kept in sync with the store by the `router` module.
 
 ## Why does _that_ matter? Isn't the browser url the "source of truth" for location state?
 
-The goal of Vuex is to move most/all of the non-trivial state of an app
-into the store, where it can be managed and safely shared across components.
+The goal of Vuex is to move most/all of the non-trivial state of an app into the store, where it can be managed and safely shared across components.
 `vuex-router` provides a relatively painless way to safely manage the application state inside the store, along with the rest of the application state, using standard Vuex `state`, `getters`, `actions`, and `mutations`.
 
 This is convenient from an API perspective, and allows for some very clean code. The location state is read and updated just like the rest of the application state, instead of requiring a separate routing API.
@@ -22,8 +19,7 @@ This is convenient from an API perspective, and allows for some very clean code.
 
 Even when used with `vuex-router-sync`, `vue-router` still uses the browser history as the "source of truth" for the location state.
 
-`vuex-router-sync` does not _fully manage_ location state inside the Vuex store.
-It copies the browser's location state into the store for convenience. `vue-router` provides a separate API, outside the Vuex store, to manage location state.
+`vuex-router-sync` does not _fully manage_ location state inside the Vuex store. It copies the browser's location state into the store for convenience. `vue-router` provides a separate API, outside the Vuex store, to manage location state.
 
 ## `vuex-router` Benefits
 
