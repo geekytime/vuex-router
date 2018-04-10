@@ -20,7 +20,7 @@ test("router", async (t) => {
 
   store.dispatch("router/go", {steps: -1})
   await wait()
-  t.equals(store.state.router.currentRoute.page, "home", "skips back over replaced items")
+  t.equals(store.getters["router/currentPage"], "home", "skips back over replaced items")
 
   store.dispatch("router/goForward")
   await wait()
