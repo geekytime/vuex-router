@@ -9,18 +9,20 @@ test("router", async (t) => {
   await wait()
   t.equals(store.getters["router/currentPage"], "home", "default route is initialized")
 
-  store.dispatch("router/push", {path: "/foo"})
+  store.dispatch("router/push", {path: "/foo#some-id"})
   await wait()
   t.equals(store.getters["router/currentPage"], "foo", "page updated when route changes")
+  t.equals(store.state.router.location.hash, "#some-id")
 
-  store.dispatch("router/replace", {path:"/bar/baz"})
+  store.dispatch("router/replace", {path:"/bar/baz?someProp=someValue"})
   await wait()
   t.equals(store.state.router.currentRoute.page, "bar", "route params get right page")
   t.equals(store.state.router.currentRoute.params.id, "baz", "route params get right params")
+  t.equals(store.state.router.location.search, "?someProp=someValue")
 
   store.dispatch("router/go", {steps: -1})
   await wait()
-  t.equals(store.state.router.currentRoute.page, "home", "skips back over replaced items")
+  t.equals(store.getters["router/currentPage"], "home", "skips back over replaced items")
 
   store.dispatch("router/goForward")
   await wait()
