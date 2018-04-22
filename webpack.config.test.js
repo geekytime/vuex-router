@@ -6,7 +6,7 @@ const WebpackTapeRun = require("webpack-tape-run")
 
 module.exports = {
   target: "web",
-  entry: glob.sync("./test/*.test.js"),
+  entry: ["./test/mount.js", ...glob.sync("./test/*.test.js")],
   node: {
     fs: "empty"
   },
