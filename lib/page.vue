@@ -6,7 +6,7 @@
 </template>
 
 <script>
-module.exports = {
+export default {
   computed: {
     pageClass () {
       const transitionClass = this.$store.getters["router/transitionForPage"](this.name)
